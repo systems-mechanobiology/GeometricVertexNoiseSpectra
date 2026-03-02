@@ -1,0 +1,69 @@
+% LaTeX Prelude for SIMAX submission
+% Based on prelude.tex, adapted for siamart251216.cls
+%
+% Removed: amsthm (SIAM uses ntheorem), geometry (SIAM has fixed layout)
+% Changed: algorithm2e uses algo2e option (SIAM loads algorithm internally)
+
+% ============================================================================
+% MATH PACKAGES
+% ============================================================================
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{mathtools}
+
+% Custom math operators
+\DeclareMathOperator{\Var}{Var}
+
+% ============================================================================
+% TABLE AND FIGURE PACKAGES
+% ============================================================================
+\usepackage{booktabs}
+\usepackage{array}
+\usepackage{makecell}
+\usepackage{caption}
+\usepackage{tikz}
+\usetikzlibrary{shapes.geometric, arrows}
+% geometry removed — SIAM cls controls layout
+
+% ============================================================================
+% ALGORITHM PACKAGE
+% ============================================================================
+% algo2e option renames environment to algorithm2e, avoiding clash with
+% SIAM's built-in \RequirePackage{algorithm}
+\usepackage[ruled,vlined,linesnumbered,algo2e]{algorithm2e}
+
+% ============================================================================
+% HYPERREF
+% ============================================================================
+% Quarto loads hyperref automatically
+
+% ============================================================================
+% THEOREM ENVIRONMENTS
+% ============================================================================
+% amsthm removed — SIAM cls uses ntheorem internally and defines
+% theorem, lemma, corollary, proposition, definition, remark environments
+
+% ============================================================================
+% CLEVEREF
+% ============================================================================
+% Note: cleveref loaded via after-body.tex (must come after hyperref)
+
+% ============================================================================
+% ACRONYMS (requires Abbreviations.tex in same directory)
+% ============================================================================
+\usepackage{acro}
+\acsetup{
+  make-links = false,
+  pages/display = first
+}
+\input{Abbreviations}
+
+% ============================================================================
+% VERTICAL SPACING
+% ============================================================================
+\raggedbottom
+
+% ============================================================================
+% HYPHENATION
+% ============================================================================
+\hyphenation{op-tical net-works semi-conduc-tor}

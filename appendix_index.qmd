@@ -1,0 +1,38 @@
+---
+title: "Supplementary Material — Index"
+subtitle: "Spectral Effects of Heavy-Tailed Vertex Noise in Geometric Graphs"
+author:
+  - Ben Cardoen, Jeremy Budd, Enrico Amico, Ghassan Hamarneh, Fabian Spill
+date: today
+format:
+  pdf:
+    papersize: letter
+    geometry: margin=1in
+    fontsize: 11pt
+    colorlinks: true
+---
+
+This document indexes the supplementary material accompanying the paper
+*Spectral Effects of Heavy-Tailed Vertex Noise in Geometric Graphs*.
+
+## Contents of the Appendix
+
+| Section | Title | Page |
+|:--------|:------|-----:|
+| 5.1 | Notation reference | 1 |
+| 5.2 | Algorithms and reproduction | 1 |
+| 5.3 | Algorithm 1 — Sample from CTPL distribution | 2 |
+| 5.4 | Algorithm 2 — Autotune $\lambda$ for tail probability | 2 |
+| 5.5 | Algorithm 3 — Estimate tail probability by Monte Carlo | 3 |
+| 5.6 | Algorithm 4 — Perturb 2D vertex by CTPL noise | 3 |
+| 5.7 | Algorithm 5 — Motif-Extractor | 3 |
+| 5.8 | Algorithm 6 — $\varepsilon$-Thickness Repair | 3 |
+| 5.9 | Proof that optimal motif tiling is NP-hard | 3 |
+
+\medskip
+
+**Source repositories** (see Section 5.2 for details):
+
+- `DynamicGeometricGraphs.jl` — geometric graph constructions, repair, motif detection
+- `CalibratedTemperedPowerLaw.jl` — CTPL distribution, sampling, S3I/SC metrics
+- `GeometricVertexNoiseSpectra` — reproduction scripts for all figures and experiments

@@ -1,0 +1,54 @@
+name: Render Paper to PDF
+
+on:
+  push:
+    tags:
+      - 'v*'           # Version tags: v1.0, v2.1, etc.
+      - 'draft-*'      # Draft versions: draft-2024-11-22
+      - 'review*'      # Review versions: review-1, review-v2
+      - 'revision*'    # Revision versions: revision-1, revision-r2
+      - 'camera*'      # Camera-ready: camera-ready, camera-v1
+      - 'internal*'    # Internal drafts: internal-2024-11-22
+
+jobs:
+  render-pdf:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Quarto
+        uses: quarto-dev/quarto-actions/setup@v2
+        with:
+          version: 'release'
+
+      - name: Install TinyTeX
+        run: quarto install tinytex
+
+      - name: Build paper
+        run: ./build_paper.sh
+
+      - name: Get tag name
+        id: tag
+        run: echo "TAG_NAME=${GITHUB_REF#refs/tags/}" >> $GITHUB_OUTPUT
+
+      - name: Upload PDF as artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: paper-${{ steps.tag.outputs.TAG_NAME }}
+          path: output/*.pdf
+          retention-days: 90
+
+      - name: Create Release with PDF
+        uses: softprops/action-gh-release@v1
+        with:
+          files: output/*.pdf
+          body: |
+            ## GTVN Paper
+
+            Automated PDF build for tag `${{ steps.tag.outputs.TAG_NAME }}`
+
+            Generated on: ${{ github.event.head_commit.timestamp }}
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

@@ -1,0 +1,79 @@
+# Quarto outputs
+output/
+*.html
+*.docx
+*_files/
+*_cache/
+/.quarto/
+
+# LaTeX intermediate files
+*.aux
+*.log
+*.out
+*.toc
+*.bbl
+*.blg
+*.fls
+*.fdb_latexmk
+*.synctex.gz
+*.xdv
+*.bcf
+*.run.xml
+
+# Generated LaTeX from Quarto (but NOT prelude.tex or Abbreviations.tex)
+paper.tex
+cover.tex
+agents/*.tex
+test.tex
+test-*.tex
+
+# LaTeX theorem-counter files
+*.thm
+
+# Quarto intermediate files
+*.quarto_ipynb
+
+# Julia
+Manifest.toml
+!reproduction/Manifest.toml
+*.jl.*.cov
+*.jl.cov
+*.jl.mem
+deps/deps.jl
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+*~
+
+# Editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Agent/log working directories (contents tracked under agents/ by convention)
+logs/
+.agents/
+.claude/
+
+# Test/scratch files
+test_simax.qmd
+
+# Temporary files
+*.tmp
+*.temp
+*.ps
+
+**/*.quarto_ipynb
+# Root-level build copies (tracked in simaxtemplate/)
+siamart251216.cls
+siamplain.bst
+edits.md
+appendix_index.tex

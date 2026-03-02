@@ -1,0 +1,34 @@
+project:
+  type: default
+  output-dir: output
+
+format:
+  pdf:
+    documentclass: article
+    papersize: letter
+    fontsize: 11pt
+    geometry:
+      - margin=1in
+    cite-method: biblatex
+    keep-tex: true
+    number-sections: true
+    toc: true
+    toc-depth: 2
+    fig-pos: 'H'
+    colorlinks: true
+  html:
+    theme: cosmo
+    toc: true
+    toc-depth: 3
+    number-sections: true
+    code-fold: true
+    embed-resources: true
+
+bibliography: references.bib
+csl: siam.csl
+
+execute:
+  freeze: auto
+  cache: true
+  echo: false
+  warning: false

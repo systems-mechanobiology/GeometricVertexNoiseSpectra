@@ -1,0 +1,65 @@
+---
+format:
+  pdf:
+    documentclass: letter
+    classoption: oneside
+    pdf-engine: pdflatex
+    keep-tex: true
+geometry: margin=1in
+toc: false
+header-includes:
+  - \usepackage{hyperref}
+  - \usepackage{setspace}
+  - \setstretch{0.9}
+---
+
+\address{%
+Ben Cardoen\\
+School of Mathematics\\
+University of Birmingham\\
+United Kingdom
+}
+
+\signature{Ben Cardoen, on behalf of the authors,}
+
+\begin{letter}{%
+Editor-in-Chief\\
+SIAM Journal on Matrix Analysis and Applications
+}
+
+\opening{Dear Editor,}
+
+Please find enclosed our manuscript entitled
+\emph{``Spectral Effects of Heavy-Tailed Vertex Noise in Geometric Graphs''}
+for consideration for publication in the \emph{SIAM Journal on Matrix Analysis and Applications (SIMAX)}.
+
+This work studies how, through a matrix perturbation lens, geometric vertex perturbations with heavy-tailed structure propagate to spectral error in graph Laplacians. While classical perturbation results such as Weyl’s inequality guarantee eigenvalue continuity, they do not explain how and when local geometric noise translates into global spectral fragility, nor when such bounds are tight in structured geometric settings. Motivated by spatial networks arising in imaging, sensing, and biological reconstruction, we introduce a calibrated tempered power-law (CTPL) vertex-noise model that retains heavy-tailed behavior while enforcing finite moments and physically meaningful displacement limits. Our analysis can be applied to any tail value, not just the extremal one. 
+
+Our main contribution is a motif-based analysis that reduces global spectral sensitivity to a finite catalogue of local geometric extremals. We show that small, degree-bounded witness subgraphs dominate worst-case Laplacian perturbations under CTPL noise and identify configurations that attain Weyl-tight bounds. These local results are lifted to general straight-line embedded graphs via local repair operations, yielding controlled approximation error while preserving sensitivity-relevant structure. To quantify observability and identifiability under noise, we introduce stochastic co-spectrality (SC) and the stochastic spectral separation index (S3I) to quantify separability of spectral distances conditional on noise model parameters, including in weak-oracle settings where noise-free graphs are unavailable. Our open source code allows others to experiment with more complex combinations of displacement, recomputing the relevant norms and limits.
+
+This work fills a critical gap between spectral graph theory and geometric data analysis by establishing the first rigorous spectral characterization of heavy-tailed vertex noise. While all numerical results are reproducible and supported by open-source code, the primary contribution is conceptual: a principled link between local geometric noise mechanisms and global spectral behavior in graph Laplacians, without relying on restrictive distributional assumptions beyond moment bounds. The geometric noise model is motivated by spatial networks in imaging and sensor systems, but the theoretical results are statements about structured perturbations of symmetric diagonally dominant matrices.
+Given its strong embedding of our perturbation limits in matrix analysis, we believe SIMAX is the ideal venue. The manuscript has not been published or submitted elsewhere, and all authors have approved its submission.
+
+Suggested reviewers:
+
+\begin{itemize}
+\item Prof. Geert Leus, Faculty of Electrical Engineering, Mathematics and Computer Science, Delft University of Technology. Specialist in graph signal processing and spectral graph theory. Email: \href{mailto:g.j.t.leus@tudelft.nl}{g.j.t.leus@tudelft.nl}
+\item Prof. Farzad Sabzikar, Department of Statistics, Iowa State University. Expert in stochastic processes, fractional models, and time series analysis. Email: \href{mailto:sabzikar@iastate.edu}{sabzikar@iastate.edu}
+\item Dr. Dmitriy Morozov, Lawrence Berkeley National Laboratory. Researcher in computational topology and geometric data analysis. Email: \href{mailto:dmitriy@mrzv.org}{dmitriy@mrzv.org}
+\item Prof. Nicol\'{a}s Garc\'{i}a Trillos, Department of Statistics, University of Wisconsin--Madison. Expert in spectral convergence of graph Laplacians on random geometric graphs; his FoCM 2020 results are directly cited in this work. Email: \href{mailto:garciatrillo@wisc.edu}{garciatrillo@wisc.edu}
+\item Prof. Dejan Slep\v{c}ev, Department of Mathematical Sciences, Carnegie Mellon University. Co-author of the cited FoCM 2020 spectral convergence paper; specialist in variational analysis and PDE methods on graphs. Email: \href{mailto:slepcev@math.cmu.edu}{slepcev@math.cmu.edu}
+\item Prof. Jan Rosi\'{n}ski, Department of Mathematics, University of Tennessee. Author of the cited tempering construction for stable processes; leading authority on tempered stable distributions. Email: \href{mailto:rosinski@math.utk.edu}{rosinski@math.utk.edu}
+\end{itemize}
+
+
+
+Yours sincerely,
+
+
+Ben Cardoen, Jeremy Budd, Enrico Amico, Ghassan Hamarneh and Fabian Spill
+
+%\closing{Sincerely,}
+%<!-- 
+%Comment_FS: I usually submit letters signed by either all or all first/last authors to show involvement. For %very mathy journlas probably not necessary but I think never hurts. Also many journals ask for reviewers to %be entered in the system so not sure if that needs to be repeated here. Just one comment on the choice: not %sure if you know them, but in general it might help to have people who also publish in the journal - sadly %often about networks ... and none of yours is from a core maths department.  -->
+
+\end{letter}

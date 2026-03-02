@@ -1,0 +1,81 @@
+% LaTeX Prelude for ROSA/GTVN Papers
+% Common packages and commands extracted from Weak-Oracle-Vertex-Graphs
+% Compatible with Quarto PDF output
+%
+% Usage: Include in _quarto.yml or document YAML:
+%   format:
+%     pdf:
+%       include-in-header:
+%         file: prelude.tex
+
+% ============================================================================
+% MATH PACKAGES
+% ============================================================================
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{mathtools}
+
+% Custom math operators
+\DeclareMathOperator{\Var}{Var}
+
+% ============================================================================
+% TABLE AND FIGURE PACKAGES
+% ============================================================================
+\usepackage{booktabs}
+\usepackage{array}
+\usepackage{makecell}
+\usepackage{caption}
+\usepackage{tikz}
+\usetikzlibrary{shapes.geometric, arrows}
+\usepackage{geometry}
+\geometry{margin=1in}
+
+% ============================================================================
+% ALGORITHM PACKAGE
+% ============================================================================
+\usepackage[ruled,vlined,linesnumbered]{algorithm2e}
+
+% ============================================================================
+% HYPERREF
+% ============================================================================
+% Note: Quarto loads hyperref automatically; do not load it here to avoid conflicts
+% If you need to customize hyperref options, use the Quarto YAML format options instead
+
+% ============================================================================
+% THEOREM ENVIRONMENTS
+% ============================================================================
+\usepackage{amsthm}
+
+% Define theorem styles
+% \theoremstyle{plain}
+% \newtheorem{theorem}{Theorem}[section]
+% \newtheorem{lemma}{Lemma}[section]
+% \newtheorem{corollary}{Corollary}[section]
+% \newtheorem{proposition}[theorem]{Proposition}
+
+% \theoremstyle{definition}
+% \newtheorem{definition}{Definition}[section]
+
+% \theoremstyle{remark}
+% \newtheorem{remark}{Remark}
+
+% ============================================================================
+% CLEVEREF
+% ============================================================================
+% Note: Moved to after-body.tex because cleveref must be loaded AFTER hyperref
+% and Quarto loads hyperref after include-in-header
+
+% ============================================================================
+% ACRONYMS (requires Abbreviations.tex in same directory)
+% ============================================================================
+\usepackage{acro}
+\acsetup{
+  make-links = false,
+  pages/display = first
+}
+\input{Abbreviations}
+
+% ============================================================================
+% HYPHENATION
+% ============================================================================
+\hyphenation{op-tical net-works semi-conduc-tor}

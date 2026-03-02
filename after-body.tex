@@ -1,0 +1,14 @@
+% LaTeX packages that must be loaded AFTER hyperref
+% This file should be included via include-in-header but uses AtBeginDocument
+% to ensure it loads after hyperref
+
+\AtBeginDocument{%
+  \usepackage[capitalize,noabbrev]{cleveref}%
+  % Define cleveref names for theorem environments
+  \crefname{theorem}{Theorem}{Theorems}%
+  \crefname{lemma}{Lemma}{Lemmas}%
+  \crefname{corollary}{Corollary}{Corollaries}%
+  \crefname{definition}{Definition}{Definitions}%
+  \crefname{proposition}{Proposition}{Propositions}%
+  \crefname{remark}{Remark}{Remarks}%
+}
