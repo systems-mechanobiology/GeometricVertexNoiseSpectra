@@ -73,7 +73,7 @@ test_simax.qmd
 
 **/*.quarto_ipynb
 # Root-level build copies (tracked in simaxtemplate/)
-siamart251216.cls
-siamplain.bst
+/siamart251216.cls
+/siamplain.bst
 edits.md
 appendix_index.tex
