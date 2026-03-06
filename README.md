@@ -1,5 +1,7 @@
 # Geometric Vertex and Topological Noise Spectra for Dynamic Geometric Graphs.
 
+[![Render Paper](https://github.com/systems-mechanobiology/GeometricVertexNoiseSpectra/actions/workflows/render-paper.yml/badge.svg)](https://github.com/systems-mechanobiology/GeometricVertexNoiseSpectra/actions/workflows/render-paper.yml)
+
 This repository holds all reproduction content for our paper on vertex noise in geometric graphs in presence of tempered power law noise model and the corresponding limits and approximations of the spectral impact.
 
 ![CTPL Demo Animation](ctpl_demo.gif)
