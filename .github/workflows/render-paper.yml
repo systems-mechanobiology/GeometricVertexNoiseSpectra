@@ -10,6 +10,9 @@ on:
       - 'camera*'      # Camera-ready: camera-ready, camera-v1
       - 'internal*'    # Internal drafts: internal-2024-11-22
 
+permissions:
+  contents: write
+
 jobs:
   render-pdf:
     runs-on: ubuntu-latest
