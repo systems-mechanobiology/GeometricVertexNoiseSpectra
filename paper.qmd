@@ -1,3 +1,5 @@
+<!-- SPDX-License-Identifier: CC-BY-4.0 -->
+<!-- Copyright (c) 2026 Ben Cardoen, Fabian Spill. Licensed under CC BY 4.0; see LICENSE-paper.md -->
 ---
 title: "Spectral Effects of Heavy-Tailed Vertex Noise in Geometric Graphs"
 author:
@@ -739,6 +741,10 @@ While our analysis is restricted to norm-induced distances, a significant part o
 Beyond methodology, the framework has direct relevance for spatial networks arising in imaging and biological reconstruction, such as mitochondrial and endoplasmic reticulum networks, filament skeletons, and single-molecule localisation graphs. In these settings, perturbations are naturally vertex-local, heavy-tailed, and geometry-constrained. The quantities introduced here—\ac{SC} and \ac{S3I}—offer interpretable summaries of spectral robustness and separability that remain meaningful even when the underlying noise distributions are non-Gaussian and only weak-oracle observations are available. In particular, estimating the noise-induced spectral envelope provides a computable noise floor that can replace domain-specific simulations or edge-independent approximations, enabling practitioners to delineate genuine structural change from localisation-induced spectral artefacts and thereby reduce both false positives and overly conservative false-negative thresholds. The extension to unconstrained embeddings via repair ensures this capability is not limited to biophysically motivated networks, and the accompanying open-source packages provide domain experts with ready-to-use tooling for spectral noise quantification on their own geometric configurations.
 
 A longer-term implication is the possibility of inversion: given noisy spectral observations and partial geometric priors, can one constrain or recover parameters of the underlying vertex-noise process using motif-level approximations and stochastic spectral summaries? Addressing such inverse problems, alongside scalable motif detection in higher dimensions, would further connect the present theory to data-driven applications. Taken together, the results of this work establish motif-aware stochastic spectral analysis as a viable and flexible lens for studying vertex noise in geometric graphs.
+
+# Acknowledgements {.unnumbered}
+
+F.S. and B.C. acknowledge funding for a UKRI Future Leaders Fellowship MR/T043571/1.
 
 # References
 
